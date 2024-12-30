@@ -2,7 +2,7 @@
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
-	font-family: 'Roboto', sans-serif;
+	font-family: 'Roboto', sans-serif, 'Times New Roman', Times, serif;
 }
 html{
 	scroll-behavior: smooth;
@@ -95,7 +95,13 @@ body{
 	transition: 0.4s;
     /* padding: 10px 20px; */
     /* background-color: #333; Navbar background color */
+} 
+.navbar {
+    padding: 15px 30px; /* Increases padding for a taller and wider navbar */
+    /* background-color: #333333; Sets a dark background for contrast */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow for depth */
 }
+
 .home.active .navbar{
 	top: 0;
 	position: fixed;
@@ -146,14 +152,20 @@ body{
 	display: inline-block;
 	margin: 0px 18px;
 }
-.navbar ul.nav-links li a{
+/* .navbar ul.nav-links li a{
 	position: relative;
 	display: inline-block;
 	text-decoration: none;
 	font-size: 15px;
 	color: var(--links-clr);
 	transition: color 0.4s;
+} */
+.navbar ul.nav-links li a {
+    font-size: 18px; /* Text size increased for better readability */
+    font-weight: bold; /* Bold text for emphasis */
+    color: var(--primary-clr); /* Dark text color */
 }
+/* 
 .navbar ul.nav-links li a::after{
 	position: absolute;
 	content: '';
@@ -164,7 +176,12 @@ body{
 	background-color: var(--primary-clr);
 	transform: scaleX(0);
 	transition: 0.4s;
+} */
+.navbar ul.nav-links li a::after {
+    height: 3px; /* Thicker underline for better visibility */
+    background-color: #ff4500; /* Accent color for hover effect */
 }
+
 .navbar ul.nav-links li a:hover::after{
 	transform: scaleX(1);
 }
@@ -237,17 +254,21 @@ body{
 .hero .hero-image {
     position: absolute; 
     right: 0; /* Align the image container to the right */
-    top: 80px; /* Give some space from the top to avoid overlap with navbar */
+    top: 90px; /* Give some space from the top to avoid overlap with navbar */
     width: 450px; /* Set the width of the image container */
-    height: 650px; /* Set the height of the image container */
+    height: 450px; /* Make the height equal to the width to create a circle */
     overflow: hidden; /* Ensure that the image doesn't overflow the container */
+    border-radius: 50%; /* Make the container circular */
+    border: 5px solid var(--primary-light-clr); /* Optional: Add a border around the circle */
 }
 
 .hero .hero-image img {
-    width: 98%; /* Make the image fill the container's width */
-    height: 95%; /* Make the image fill the container's height */
+    width: 100%; /* Ensure the image fills the circular container */
+    height: 100%; /* Ensure the image fills the circular container */
     object-fit: cover; /* Ensure the image covers the container without distortion */
+    border-radius: 50%; /* Ensure the image fits the circular shape */
 }
+
 
 /*   *** Home Section Styling Ends ***   */
 
